@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Googly Eye Detection</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .eye {
+        background: white;
+        border: 2px solid black;
+        border-radius: 25px;
+        height: 25px;
+        position: absolute;
+        width: 25px;
+      }
+
+      .eye-left {
+        top: 250px;
+        left: 396px;
+      }
+
+      .eye-right {
+        top: 247px;
+        left: 514px;
+      }
+
+      .pupil {
+        background: black;
+        border-radius: 8px;
+        height: 8px;
+        left: 50%;
+        margin-left: -4px;
+        margin-top: -4px;
+        position: absolute;
+        top: 50%;
+        width: 8px;
+      }
+    </style>
+    <script src="js/headtrackr.min.js"></script>
+  </head>
+  <body>
+    <img src="img/Mona-Lisa.jpg" width="1024" height="768" alt="">
+    <div class="eye eye-left">
+      <div class="pupil"></div>
+    </div>
+    <div class="eye eye-right">
+      <div class="pupil"></div>
+    </div>
+
+    <canvas id="inputCanvas" width="200" height="200" style="display: none;"></canvas>
+    <video id="inputVideo" height="0" width="0" autoplay loop></video>
+    <script>
+      (function() {
+        function initEyes() {
+          var pupils = document.getElementsByClassName('pupil');
+
+          document.addEventListener('facetrackingEvent', function (event) {
+            var i, len;
+
+            for (i = 0, len = pupils.length; i < len; i++) {
+              pupils[i].style.left = (100 - ((event.x / 200) * 100)) + '%';
+              pupils[i].style.top = ((event.y / 200) * 100) + '%';
+            }
+          }, false);
+        }
+
+        function initTracking() {
+          var videoInput = document.getElementById('inputVideo');
+          var canvasInput = document.getElementById('inputCanvas');
+          var htracker = new headtrackr.Tracker({ui: false});
+          htracker.init(videoInput, canvasInput);
+          htracker.start();
+        }
+
+        initEyes();
+        initTracking();
+      })();
+    </script>
+  </body>
+</html>
