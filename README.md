@@ -3,7 +3,7 @@
 ### Installation
 
 - `npm install connect`
-- visit http://localhost:8080
+- Visit `http://localhost:8080`
 
 ##### Information
 
