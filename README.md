@@ -3,7 +3,9 @@
 Using the [Headtrackr](https://github.com/auduno/headtrackr/) JavaScript library, Mona Lisa uses
 the camera on your laptop to track your face and follow your face with her eyes.
 
-### Demo: http://ssorallen.github.io/googly-eyed-mona-lisa
+### Demo
+
+https://ssorallen.github.io/googly-eyed-mona-lisa/
 
 ### Installation
 
