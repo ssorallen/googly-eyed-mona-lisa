@@ -1,0 +1,13 @@
+{
+  "name": "googly-eyed-mona-lisa",
+  "version": "1.0.0",
+  "description": "Mona Lisa's googly eyes will follow your face...",
+  "main": "index.html",
+  "repository": "https://github.com/ssorallen/googly-eyed-mona-lisa",
+  "author": "Ross Allen <rossgit@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}
