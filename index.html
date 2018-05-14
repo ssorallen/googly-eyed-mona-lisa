@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Googly Eye Detection</title>
     <style>
       body {
@@ -48,9 +49,21 @@
     <div class="eye eye-right">
       <div class="pupil"></div>
     </div>
-
     <canvas id="inputCanvas" width="200" height="200" style="display: none;"></canvas>
     <video id="inputVideo" height="0" width="0" autoplay loop></video>
+    <footer style="margin-left: 1em;">
+      <p>
+        Using the Headtrackr JavaScript library, Mona Lisa uses the camera on your laptop to track
+        your face and follow your face with her eyes.
+      </p>
+      <p>Created by Ross Allen &lt;<a href="https://github.com/ssorallen">ssorallen</a>&gt;</p>
+      <p>
+        Source available at
+        <a href="https://github.com/ssorallen/googly-eyed-mona-lisa">
+          ssorallen/googly-eyed-mona-lisa
+        </a>
+      </p>
+    </footer>
     <script>
       (function() {
         function initEyes() {
