@@ -9,5 +9,8 @@
   "private": true,
   "devDependencies": {
     "gh-pages": "^1.1.0"
+  },
+  "scripts": {
+    "deploy": "yarn gh-pages deploy -d . -v node_modules"
   }
 }
